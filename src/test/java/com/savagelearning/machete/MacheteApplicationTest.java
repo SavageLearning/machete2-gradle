@@ -6,9 +6,9 @@ package com.savagelearning.machete;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class MacheteApplicationTest {
     @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        var classUnderTest = new MacheteApplication();
+        assertNotNull("app should have a greeting", classUnderTest.getName());
     }
 }
