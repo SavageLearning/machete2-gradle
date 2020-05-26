@@ -38,3 +38,12 @@ application {
 run {
     args 'server', 'machete.yml'
 }
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'com.savagelearning.machete.MacheteApplication'
+    }
+    baseName = 'all-in-one-jar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
