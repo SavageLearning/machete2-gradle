@@ -5,6 +5,8 @@ package com.savagelearning.machete;
 
 import com.savagelearning.machete.resources.HelloWorldResource;
 import io.dropwizard.Application;
+import io.dropwizard.db.DataSourceFactory;
+import io.dropwizard.migrations.MigrationsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 //import com.example.helloworld.resources.HelloWorldResource;
@@ -22,7 +24,12 @@ public class MacheteApplication extends Application<MacheteConfiguration> {
 
     @Override
     public void initialize(Bootstrap<MacheteConfiguration> bootstrap) {
-        // nothing to do yet
+        bootstrap.addBundle(new MigrationsBundle<MacheteConfiguration>() {
+            @Override
+            public DataSourceFactory getDataSourceFactory(MacheteConfiguration configuration) {
+                return configuration.getDataSourceFactory();
+            }
+        });
     }
 
     @Override

@@ -1,0 +1,2859 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1590217406948-1
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserTokens
+              name: UserId
+              type: nvarchar(450)
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserTokens
+              name: LoginProvider
+              type: nvarchar(450)
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserTokens
+              name: Name
+              type: nvarchar(450)
+          - column:
+              name: Value
+              type: nvarchar(MAX)
+          tableName: AspNetUserTokens
+  - changeSet:
+      id: 1590217406948-2
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.TransportProviderAvailabilities
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: transportProviderID
+              type: int
+          - column:
+              name: key
+              type: nvarchar(50)
+          - column:
+              name: lookupKey
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: day
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: available
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: TransportProviderAvailabilities
+  - changeSet:
+      id: 1590217406948-3
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_ActivitySignins
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: ActivityID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dwccardnum
+              type: int
+          - column:
+              name: memberStatus
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dateforsignin
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              name: personID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__ActivityS__timeZ__7C4F7684
+              defaultValueNumeric: 0.0
+              name: timeZoneOffset
+              type: float(53)
+          tableName: ActivitySignins
+  - changeSet:
+      id: 1590217406948-4
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK___EFMigrationsHistory
+              name: MigrationId
+              type: nvarchar(150)
+          - column:
+              constraints:
+                nullable: false
+              name: ProductVersion
+              type: nvarchar(32)
+          tableName: __EFMigrationsHistory
+  - changeSet:
+      id: 1590217406948-5
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.ScheduleRules
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: day
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: leadHours
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: minStartMin
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: maxEndMin
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: ScheduleRules
+  - changeSet:
+      id: 1590217406948-6
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.TransportCostRules
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: transportRuleID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: minWorker
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: maxWorker
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: cost
+              type: float(53)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: TransportCostRules
+  - changeSet:
+      id: 1590217406948-7
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__WorkerSi__3214EC275CE53F05
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dwccardnum
+              type: int
+          - column:
+              name: WorkerID
+              type: int
+          - column:
+              name: WorkAssignmentID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dateforsignin
+              type: datetime
+          - column:
+              name: lottery_timestamp
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              name: memberStatus
+              type: int
+          - column:
+              name: lottery_sequence
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__WorkerSig__timeZ__0D7A0286
+              defaultValueNumeric: 0.0
+              name: timeZoneOffset
+              type: float(53)
+          tableName: WorkerSignins
+  - changeSet:
+      id: 1590217406948-8
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__WorkerRe__3214EC27776DAD9B
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: WorkOrderID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: WorkerID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: WorkerRequests
+  - changeSet:
+      id: 1590217406948-9
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__Persons__3214EC275FDDAF4D
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: active
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: firstname1
+              type: nvarchar(50)
+          - column:
+              name: firstname2
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: lastname1
+              type: nvarchar(50)
+          - column:
+              name: lastname2
+              type: nvarchar(50)
+          - column:
+              name: address1
+              type: nvarchar(50)
+          - column:
+              name: address2
+              type: nvarchar(50)
+          - column:
+              name: city
+              type: nvarchar(25)
+          - column:
+              name: state
+              type: nvarchar(2)
+          - column:
+              name: zipcode
+              type: nvarchar(10)
+          - column:
+              name: phone
+              type: nvarchar(12)
+          - column:
+              constraints:
+                nullable: false
+              name: gender
+              type: int
+          - column:
+              name: genderother
+              type: nvarchar(20)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              name: nickname
+              type: nvarchar(50)
+          - column:
+              name: cellphone
+              type: nvarchar(12)
+          - column:
+              name: email
+              type: nvarchar(50)
+          - column:
+              name: facebook
+              type: nvarchar(50)
+          - column:
+              name: fullName
+              type: nvarchar(MAX)
+          tableName: Persons
+  - changeSet:
+      id: 1590217406948-10
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__Events__3214EC276981ADA8
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: PersonID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: eventType
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dateFrom
+              type: datetime
+          - column:
+              name: dateTo
+              type: datetime
+          - column:
+              name: notes
+              type: nvarchar(4000)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              name: eventTypeEN
+              type: nvarchar(50)
+          - column:
+              name: eventTypeES
+              type: nvarchar(50)
+          tableName: Events
+  - changeSet:
+      id: 1590217406948-11
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.ReportDefinitions
+              name: ID
+              type: int
+          - column:
+              name: name
+              type: nvarchar(MAX)
+          - column:
+              name: commonName
+              type: nvarchar(MAX)
+          - column:
+              name: title
+              type: nvarchar(MAX)
+          - column:
+              name: description
+              type: nvarchar(MAX)
+          - column:
+              name: sqlquery
+              type: nvarchar(MAX)
+          - column:
+              name: category
+              type: nvarchar(MAX)
+          - column:
+              name: subcategory
+              type: nvarchar(MAX)
+          - column:
+              name: inputsJson
+              type: nvarchar(MAX)
+          - column:
+              name: columnsJson
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: ReportDefinitions
+  - changeSet:
+      id: 1590217406948-12
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserRoles
+              name: UserId
+              type: nvarchar(450)
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserRoles
+              name: RoleId
+              type: nvarchar(450)
+          tableName: AspNetUserRoles
+  - changeSet:
+      id: 1590217406948-13
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__WorkAssi__3214EC2780748FBF
+              name: ID
+              type: int
+          - column:
+              name: workerAssignedID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: workOrderID
+              type: int
+          - column:
+              name: workerSigninID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: active
+              type: bit
+          - column:
+              name: pseudoID
+              type: int
+          - column:
+              name: description
+              type: nvarchar(1000)
+          - column:
+              constraints:
+                nullable: false
+              name: englishLevelID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: skillID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: hourlyWage
+              type: float(53)
+          - column:
+              constraints:
+                nullable: false
+              name: hours
+              type: float(53)
+          - column:
+              name: hourRange
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: days
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: qualityOfWork
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: followDirections
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: attitude
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: reliability
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: transportProgram
+              type: int
+          - column:
+              name: comments
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__WorkAssig__surch__0B91BA14
+              defaultValueNumeric: 0.0
+              name: surcharge
+              type: float(53)
+          - column:
+              name: workerRating
+              type: int
+          - column:
+              name: workerRatingComments
+              type: nvarchar(500)
+          - column:
+              name: weightLifted
+              type: bit
+          - column:
+              name: skillEN
+              type: nvarchar(MAX)
+          - column:
+              name: skillES
+              type: nvarchar(MAX)
+          - column:
+              name: fullWAID
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__WorkAssig__minEa__0C85DE4D
+              defaultValueNumeric: 0.0
+              name: minEarnings
+              type: float(53)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__WorkAssig__maxEa__0A9D95DB
+              defaultValueNumeric: 0.0
+              name: maxEarnings
+              type: float(53)
+          - column:
+              name: transportCost
+              type: float(53)
+          tableName: WorkAssignments
+  - changeSet:
+      id: 1590217406948-14
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.Configs
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: key
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: value
+              type: nvarchar(MAX)
+          - column:
+              name: description
+              type: nvarchar(MAX)
+          - column:
+              name: category
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''true'''
+              defaultValueConstraintName: DF__Configs__publicC__02084FDA
+              name: publicConfig
+              type: bit
+          tableName: Configs
+  - changeSet:
+      id: 1590217406948-15
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.TransportRules
+              name: ID
+              type: int
+          - column:
+              name: key
+              type: nvarchar(50)
+          - column:
+              name: lookupKey
+              type: nvarchar(50)
+          - column:
+              name: zoneLabel
+              type: nvarchar(50)
+          - column:
+              name: zipcodes
+              type: nvarchar(1000)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: TransportRules
+  - changeSet:
+      id: 1590217406948-16
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__Lookups__3214EC276073CE99
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: category
+              type: nvarchar(20)
+          - column:
+              constraints:
+                nullable: false
+              name: text_EN
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: text_ES
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: selected
+              type: bit
+          - column:
+              name: subcategory
+              type: nvarchar(20)
+          - column:
+              name: level
+              type: int
+          - column:
+              name: wage
+              type: float(53)
+          - column:
+              name: minHour
+              type: int
+          - column:
+              name: fixedJob
+              type: bit
+          - column:
+              name: sortorder
+              type: int
+          - column:
+              name: typeOfWorkID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: speciality
+              type: bit
+          - column:
+              name: ltrCode
+              type: nvarchar(3)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__Lookups__datecre__06CD04F7
+              defaultValueDate: 1900-01-01T00:00:00
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__Lookups__dateupd__07C12930
+              defaultValueDate: 1900-01-01T00:00:00
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              name: emailTemplate
+              type: nvarchar(4000)
+          - column:
+              name: key
+              type: nvarchar(30)
+          - column:
+              name: skillDescriptionEn
+              type: nvarchar(300)
+          - column:
+              name: skillDescriptionEs
+              type: nvarchar(300)
+          - column:
+              name: minimumCost
+              type: float(53)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''true'''
+              defaultValueConstraintName: DF__Lookups__active__08B54D69
+              name: active
+              type: bit
+          tableName: Lookups
+  - changeSet:
+      id: 1590217406948-17
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.TransportProviders
+              name: ID
+              type: int
+          - column:
+              name: key
+              type: nvarchar(50)
+          - column:
+              name: text_EN
+              type: nvarchar(50)
+          - column:
+              name: text_ES
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: defaultAttribute
+              type: bit
+          - column:
+              name: sortorder
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: active
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: TransportProviders
+  - changeSet:
+      id: 1590217406948-18
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__WorkOrde__3214EC278C43EFBC
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: EmployerID
+              type: int
+          - column:
+              name: paperOrderNum
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: waPseudoIDCounter
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: contactName
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: status
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: workSiteAddress1
+              type: nvarchar(50)
+          - column:
+              name: workSiteAddress2
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: city
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: state
+              type: nvarchar(2)
+          - column:
+              constraints:
+                nullable: false
+              name: phone
+              type: nvarchar(12)
+          - column:
+              constraints:
+                nullable: false
+              name: zipcode
+              type: nvarchar(10)
+          - column:
+              constraints:
+                nullable: false
+              name: typeOfWorkID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: englishRequired
+              type: bit
+          - column:
+              name: englishRequiredNote
+              type: nvarchar(100)
+          - column:
+              constraints:
+                nullable: false
+              name: lunchSupplied
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: permanentPlacement
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: transportMethodID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: transportFee
+              type: float(53)
+          - column:
+              constraints:
+                nullable: false
+              name: transportFeeExtra
+              type: float(53)
+          - column:
+              name: description
+              type: nvarchar(4000)
+          - column:
+              constraints:
+                nullable: false
+              name: dateTimeofWork
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: timeFlexible
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__WorkOrder__onlin__10566F31
+              name: onlineSource
+              type: bit
+          - column:
+              name: transportTransactType
+              type: int
+          - column:
+              name: transportTransactID
+              type: nvarchar(50)
+          - column:
+              name: additionalNotes
+              type: nvarchar(1000)
+          - column:
+              name: disclosureAgreement
+              type: bit
+          - column:
+              name: statusEN
+              type: nvarchar(50)
+          - column:
+              name: statusES
+              type: nvarchar(50)
+          - column:
+              name: transportMethodEN
+              type: nvarchar(MAX)
+          - column:
+              name: transportMethodES
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__WorkOrder__timeZ__0E6E26BF
+              defaultValueNumeric: 0.0
+              name: timeZoneOffset
+              type: float(53)
+          - column:
+              name: ppFee
+              type: float(53)
+          - column:
+              name: ppResponse
+              type: nvarchar(MAX)
+          - column:
+              name: ppPaymentToken
+              type: nvarchar(25)
+          - column:
+              name: ppPaymentID
+              type: nvarchar(50)
+          - column:
+              name: ppPayerID
+              type: nvarchar(25)
+          - column:
+              name: ppState
+              type: nvarchar(20)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__WorkOrder__trans__0F624AF8
+              defaultValueNumeric: 0
+              name: transportProviderID
+              type: int
+          tableName: WorkOrders
+  - changeSet:
+      id: 1590217406948-19
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.AspNetRoles
+              name: Id
+              type: nvarchar(450)
+          - column:
+              name: Name
+              type: nvarchar(256)
+          - column:
+              name: ConcurrencyStamp
+              type: nvarchar(MAX)
+          - column:
+              name: NormalizedName
+              type: nvarchar(256)
+          tableName: AspNetRoles
+  - changeSet:
+      id: 1590217406948-20
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+              name: WorkOrder_ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: Email_ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime2
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime2
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: EmailWorkOrder
+  - changeSet:
+      id: 1590217406948-21
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.Emails
+              name: ID
+              type: int
+          - column:
+              name: emailFrom
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: emailTo
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: subject
+              type: nvarchar(100)
+          - column:
+              constraints:
+                nullable: false
+              name: body
+              type: nvarchar(4000)
+          - column:
+              constraints:
+                nullable: false
+              name: transmitAttempts
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: statusID
+              type: int
+          - column:
+              name: lastAttempt
+              type: datetime
+          - column:
+              name: attachment
+              type: nvarchar(MAX)
+          - column:
+              name: attachmentContentType
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: RowVersion
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: Emails
+  - changeSet:
+      id: 1590217406948-22
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_JoinEventImage
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              constraints:
+                nullable: false
+              name: EventID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: ImageID
+              type: int
+          tableName: JoinEventImage
+  - changeSet:
+      id: 1590217406948-23
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.AspNetUsers
+              name: Id
+              type: nvarchar(450)
+          - column:
+              name: UserName
+              type: nvarchar(256)
+          - column:
+              name: PasswordHash
+              type: nvarchar(MAX)
+          - column:
+              name: SecurityStamp
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: ApplicationId
+              type: uniqueidentifier
+          - column:
+              name: MobileAlias
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: IsAnonymous
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: LastActivityDate
+              type: datetime2
+          - column:
+              name: MobilePIN
+              type: nvarchar(MAX)
+          - column:
+              name: Email
+              type: nvarchar(256)
+          - column:
+              name: LoweredEmail
+              type: nvarchar(MAX)
+          - column:
+              name: LoweredUserName
+              type: nvarchar(MAX)
+          - column:
+              name: PasswordQuestion
+              type: nvarchar(MAX)
+          - column:
+              name: PasswordAnswer
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: IsApproved
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: IsLockedOut
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: CreateDate
+              type: datetime2
+          - column:
+              constraints:
+                nullable: false
+              name: LastLoginDate
+              type: datetime2
+          - column:
+              constraints:
+                nullable: false
+              name: LastPasswordChangedDate
+              type: datetime2
+          - column:
+              constraints:
+                nullable: false
+              name: LastLockoutDate
+              type: datetime2
+          - column:
+              constraints:
+                nullable: false
+              name: FailedPasswordAttemptCount
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: FailedPasswordAttemptWindowStart
+              type: datetime2
+          - column:
+              constraints:
+                nullable: false
+              name: FailedPasswordAnswerAttemptCount
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: FailedPasswordAnswerAttemptWindowStart
+              type: datetime2
+          - column:
+              name: Comment
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__AspNetUse__Email__7F2BE32F
+              name: EmailConfirmed
+              type: bit
+          - column:
+              name: PhoneNumber
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__AspNetUse__Phone__00200768
+              name: PhoneNumberConfirmed
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__AspNetUse__TwoFa__01142BA1
+              name: TwoFactorEnabled
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__AspNetUse__Locko__7D439ABD
+              name: LockoutEnabled
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__AspNetUse__Acces__7E37BEF6
+              defaultValueNumeric: 0
+              name: AccessFailedCount
+              type: int
+          - column:
+              name: FirstName
+              type: nvarchar(MAX)
+          - column:
+              name: LastName
+              type: nvarchar(MAX)
+          - column:
+              name: ConcurrencyStamp
+              type: nvarchar(MAX)
+          - column:
+              name: LockoutEnd
+              type: datetimeoffset
+          - column:
+              name: NormalizedEmail
+              type: nvarchar(256)
+          - column:
+              name: NormalizedUserName
+              type: nvarchar(256)
+          tableName: AspNetUsers
+  - changeSet:
+      id: 1590217406948-24
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_Activities
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: name
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: type
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dateStart
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateEnd
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: teacher
+              type: nvarchar(MAX)
+          - column:
+              name: notes
+              type: nvarchar(4000)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__Activitie__recur__7A672E12
+              name: recurring
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              defaultValueConstraintName: DF__Activitie__first__7B5B524B
+              defaultValueNumeric: 0
+              name: firstID
+              type: int
+          - column:
+              name: nameEN
+              type: nvarchar(50)
+          - column:
+              name: nameES
+              type: nvarchar(50)
+          - column:
+              name: typeEN
+              type: nvarchar(50)
+          - column:
+              name: typeES
+              type: nvarchar(50)
+          tableName: Activities
+  - changeSet:
+      id: 1590217406948-25
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+              name: UserId
+              type: nvarchar(450)
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserLogins
+              name: LoginProvider
+              type: nvarchar(450)
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetUserLogins
+              name: ProviderKey
+              type: nvarchar(450)
+          - column:
+              name: ProviderDisplayName
+              type: nvarchar(MAX)
+          tableName: AspNetUserLogins
+  - changeSet:
+      id: 1590217406948-26
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__Employer__3214EC2794CD86BE
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: active
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: business
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              name: name
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: address1
+              type: nvarchar(50)
+          - column:
+              name: address2
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: city
+              type: nvarchar(50)
+          - column:
+              constraints:
+                nullable: false
+              name: state
+              type: nvarchar(2)
+          - column:
+              constraints:
+                nullable: false
+              name: phone
+              type: nvarchar(12)
+          - column:
+              name: cellphone
+              type: nvarchar(12)
+          - column:
+              constraints:
+                nullable: false
+              name: zipcode
+              type: nvarchar(10)
+          - column:
+              name: email
+              type: nvarchar(50)
+          - column:
+              name: referredby
+              type: int
+          - column:
+              name: referredbyOther
+              type: nvarchar(50)
+          - column:
+              name: blogparticipate
+              type: bit
+          - column:
+              name: notes
+              type: nvarchar(4000)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__Employers__onlin__03F0984C
+              name: onlineSource
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__Employers__retur__04E4BC85
+              name: returnCustomer
+              type: bit
+          - column:
+              constraints:
+                nullable: false
+              defaultValueComputed: '''false'''
+              defaultValueConstraintName: DF__Employers__recei__05D8E0BE
+              name: receiveUpdates
+              type: bit
+          - column:
+              name: businessname
+              type: nvarchar(MAX)
+          - column:
+              name: licenseplate
+              type: nvarchar(10)
+          - column:
+              name: driverslicense
+              type: nvarchar(30)
+          - column:
+              name: onlineSigninID
+              type: nvarchar(128)
+          - column:
+              name: isOnlineProfileComplete
+              type: bit
+          - column:
+              name: fax
+              type: nvarchar(12)
+          tableName: Employers
+  - changeSet:
+      id: 1590217406948-27
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_AspNetRoleClaims
+              name: Id
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: RoleId
+              type: nvarchar(450)
+          - column:
+              name: ClaimType
+              type: nvarchar(MAX)
+          - column:
+              name: ClaimValue
+              type: nvarchar(MAX)
+          tableName: AspNetRoleClaims
+  - changeSet:
+      id: 1590217406948-28
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK_dbo.AspNetUserClaims
+              name: Id
+              type: int
+          - column:
+              name: ClaimType
+              type: nvarchar(MAX)
+          - column:
+              name: ClaimValue
+              type: nvarchar(MAX)
+          - column:
+              constraints:
+                nullable: false
+              name: UserId
+              type: nvarchar(450)
+          tableName: AspNetUserClaims
+  - changeSet:
+      id: 1590217406948-29
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              autoIncrement: true
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__Images__3214EC27C636928E
+              name: ID
+              type: int
+          - column:
+              name: ImageData
+              type: varbinary(MAX)
+          - column:
+              name: ImageMimeType
+              type: nvarchar(30)
+          - column:
+              name: filename
+              type: nvarchar(255)
+          - column:
+              name: Thumbnail
+              type: varbinary(MAX)
+          - column:
+              name: ThumbnailMimeType
+              type: nvarchar(30)
+          - column:
+              name: parenttable
+              type: nvarchar(30)
+          - column:
+              name: recordkey
+              type: nvarchar(20)
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          tableName: Images
+  - changeSet:
+      id: 1590217406948-30
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__Workers__3214EC27DEE4CDDD
+              name: ID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: typeOfWorkID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: dateOfMembership
+              type: datetime
+          - column:
+              name: dateOfBirth
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: memberStatus
+              type: int
+          - column:
+              name: memberReactivateDate
+              type: datetime
+          - column:
+              name: active
+              type: bit
+          - column:
+              name: RaceID
+              type: int
+          - column:
+              name: raceother
+              type: nvarchar(20)
+          - column:
+              name: height
+              type: nvarchar(50)
+          - column:
+              name: weight
+              type: nvarchar(10)
+          - column:
+              constraints:
+                nullable: false
+              name: englishlevelID
+              type: int
+          - column:
+              name: recentarrival
+              type: bit
+          - column:
+              name: dateinUSA
+              type: datetime
+          - column:
+              name: dateinseattle
+              type: datetime
+          - column:
+              name: disabled
+              type: bit
+          - column:
+              name: disabilitydesc
+              type: nvarchar(50)
+          - column:
+              name: maritalstatus
+              type: int
+          - column:
+              name: livewithchildren
+              type: bit
+          - column:
+              name: numofchildren
+              type: int
+          - column:
+              name: incomeID
+              type: int
+          - column:
+              name: livealone
+              type: bit
+          - column:
+              name: emcontUSAname
+              type: nvarchar(50)
+          - column:
+              name: emcontUSArelation
+              type: nvarchar(30)
+          - column:
+              name: emcontUSAphone
+              type: nvarchar(14)
+          - column:
+              constraints:
+                nullable: false
+              name: dwccardnum
+              type: int
+          - column:
+              name: neighborhoodID
+              type: int
+          - column:
+              name: immigrantrefugee
+              type: bit
+          - column:
+              name: countryoforiginID
+              type: int
+          - column:
+              name: emcontoriginname
+              type: nvarchar(50)
+          - column:
+              name: emcontoriginrelation
+              type: nvarchar(30)
+          - column:
+              name: emcontoriginphone
+              type: nvarchar(14)
+          - column:
+              constraints:
+                nullable: false
+              name: memberexpirationdate
+              type: datetime
+          - column:
+              name: driverslicense
+              type: bit
+          - column:
+              name: licenseexpirationdate
+              type: datetime
+          - column:
+              name: carinsurance
+              type: bit
+          - column:
+              name: insuranceexpiration
+              type: datetime
+          - column:
+              name: ImageID
+              type: int
+          - column:
+              name: skill1
+              type: int
+          - column:
+              name: skill2
+              type: int
+          - column:
+              name: skill3
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: datecreated
+              type: datetime
+          - column:
+              constraints:
+                nullable: false
+              name: dateupdated
+              type: datetime
+          - column:
+              name: Createdby
+              type: nvarchar(30)
+          - column:
+              name: Updatedby
+              type: nvarchar(30)
+          - column:
+              name: homeless
+              type: bit
+          - column:
+              name: workerRating
+              type: float(24)
+          - column:
+              name: housingType
+              type: int
+          - column:
+              name: liveWithSpouse
+              type: bit
+          - column:
+              name: liveWithDescription
+              type: nvarchar(1000)
+          - column:
+              name: americanBornChildren
+              type: int
+          - column:
+              name: numChildrenUnder18
+              type: int
+          - column:
+              name: educationLevel
+              type: int
+          - column:
+              name: farmLaborCharacteristics
+              type: int
+          - column:
+              name: wageTheftVictim
+              type: bit
+          - column:
+              name: wageTheftRecoveryAmount
+              type: float(53)
+          - column:
+              name: lastPaymentDate
+              type: datetime
+          - column:
+              name: lastPaymentAmount
+              type: float(53)
+          - column:
+              name: ownTools
+              type: bit
+          - column:
+              name: healthInsurance
+              type: bit
+          - column:
+              name: usVeteran
+              type: bit
+          - column:
+              name: healthInsuranceDate
+              type: datetime
+          - column:
+              name: vehicleTypeID
+              type: int
+          - column:
+              name: incomeSourceID
+              type: int
+          - column:
+              name: introToCenter
+              type: nvarchar(1000)
+          - column:
+              name: lgbtq
+              type: bit
+          - column:
+              name: typeOfWork
+              type: nvarchar(MAX)
+          - column:
+              name: memberStatusEN
+              type: nvarchar(50)
+          - column:
+              name: memberStatusES
+              type: nvarchar(50)
+          - column:
+              name: fullNameAndID
+              type: nvarchar(100)
+          - column:
+              name: skillCodes
+              type: nvarchar(MAX)
+          tableName: Workers
+  - changeSet:
+      id: 1590217406948-31
+      author: jcii (generated)
+      changes:
+      - createTable:
+          columns:
+          - column:
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: PK__DrivingD__92BED8411077B92E
+              name: distancesID
+              type: int
+          - column:
+              constraints:
+                nullable: false
+              name: workOrderId
+              type: int
+          - column:
+              name: drivingDistanceInMiles
+              type: float(53)
+          tableName: DrivingDistances
+  - changeSet:
+      id: 1590217406948-32
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: transportProviderID
+          indexName: IX_transportProviderID
+          tableName: TransportProviderAvailabilities
+  - changeSet:
+      id: 1590217406948-33
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT COUNT(ActivitySignins.ID) AS ActivitySigninCount, MONTH(dateforsignin) AS MonthOfSignin, YEAR(dateforsignin) AS YearOfSignin
+            FROM ActivitySignins
+            GROUP BY YEAR(dateforsignin), MONTH(dateforsignin);
+          viewName: ActivitySigninsCountByMonth
+  - changeSet:
+      id: 1590217406948-34
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: "select wid,\n\t   groupingint,\n\t   duration minutes, \n\t\
+            \   testname as Grouping, \n\t   repname.datefrom \nfrom \n(\n\tSELECT WID,\
+            \ \n\t\t\tSUM(duration) AS duration,\n\t\t\tclassdate, \n\t\t\t(\t\n\t\t\
+            \t\tselect count(ww.id) colgroup\n\t\t\t\tfrom workers ww\n\t\t\t\tjoin\
+            \ dbo.events ee on (ww.id = ee.personID)\n\t\t\t\tjoin lookups ll on (ee.eventtype\
+            \ = ll.id)\n\t\t\t\twhere ll.subcategory = 'test' and\n\t\t\t\t\t  ww.id\
+            \ = WID and\n\t\t\t\t\t  ee.dateFrom < classdate\t\t\n\t\t\t) as groupingINT\n\
+            \tFROM (SELECT w.ID WID, \n\t\t\t\t a.id aid, \n\t\t\t\t asi.id asiid,\n\
+            \t\t\t\t a.dateStart classdate,\n\t\t\t\t /** Use Activity type to get English\
+            \ Lookup name **/\n\t\t\t\t (SELECT text_EN FROM Lookups AS Lookups_1 WHERE\
+            \ (ID = a.type)) AS classtype,\n\t\t\t\t /** calculate the DURATION **/\
+            \ \n\t\t\t\t (DATEPART(hour, a.dateEnd) * 60 + DATEPART(minute, a.dateEnd))\
+            \ - \n\t\t\t\t\t\t\t(DATEPART(hour, a.dateStart) * 60 + DATEPART(minute,\
+            \ a.dateStart)) AS duration\n\t\t   FROM Workers AS w INNER JOIN /** **/\n\
+            \t\t\t    ActivitySignins AS asi ON w.ID = asi.personID INNER JOIN\n\t\t\
+            \t    Activities AS a ON a.ID = asi.ActivityID \n\t\t   ) AS r\n\tGROUP\
+            \ BY WID, classdate, classtype, aid, asiid\n) rr\nleft join \n(\n\tselect\
+            \ row_number() over (partition by w.id order by e.datefrom) row, \n\t\t\t\
+            w.id wwid, \n\t\t\t(select text_EN from lookups lll where lll.id = e.eventtype)\
+            \ testname, \n\t\t\te.dateFrom\n\tfrom workers w \n\tjoin dbo.events e on\
+            \ (w.id = e.personID)\n\tjoin lookups l on (e.eventtype = l.id)\n\twhere\
+            \ l.subcategory = 'test'\n\tunion all\n\t(\n\t\tselect 0 as row, id as id,\
+            \ 'initiation' as testname, dateofbirth as datefrom\n\t\tfrom workers \n\
+            \t)\n) as repname on (rr.groupingINT = repname.row and rr.wid = repname.wwid)"
+          viewName: ClassHoursGroupedByTest
+  - changeSet:
+      id: 1590217406948-35
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: ActivityID
+          indexName: IX_activityID
+          tableName: ActivitySignins
+  - changeSet:
+      id: 1590217406948-36
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: personID
+          indexName: IX_personID
+          tableName: ActivitySignins
+  - changeSet:
+      id: 1590217406948-37
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: transportRuleID
+          indexName: IX_transportRuleID
+          tableName: TransportCostRules
+  - changeSet:
+      id: 1590217406948-38
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: dwccardnum
+          indexName: nci_wi_WorkerSignins_920345646A83399347A7
+          tableName: WorkerSignins
+  - changeSet:
+      id: 1590217406948-39
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT COUNT(WorkerSignins.ID) AS WorkerSigninCount, MONTH(dateforsignin) AS MonthOfSignin, YEAR(dateforsignin) AS YearOfSignin
+            FROM WorkerSignins
+            GROUP BY YEAR(dateforsignin), MONTH(dateforsignin);
+          viewName: WorkerSigninsCountByMonth
+  - changeSet:
+      id: 1590217406948-40
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT COUNT(Persons.ID) AS MemberCount, MONTH(datecreated) AS MonthOfMembership, YEAR(datecreated) AS YearOfMembership
+            FROM Persons
+            GROUP BY YEAR(datecreated), MONTH(datecreated);
+          viewName: MemberCountByMonth
+  - changeSet:
+      id: 1590217406948-41
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: PersonID
+          baseTableName: Events
+          constraintName: Event_Person
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Persons
+          validate: true
+  - changeSet:
+      id: 1590217406948-42
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: RoleId
+          indexName: IX_AspNetUserRoles_RoleId
+          tableName: AspNetUserRoles
+  - changeSet:
+      id: 1590217406948-43
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: workOrderID
+          - column:
+              name: workerAssignedID
+          indexName: nci_wi_WorkAssignments_5B642451-D8CD-4C46-AECF-E3EF196FD1B1
+          tableName: WorkAssignments
+  - changeSet:
+      id: 1590217406948-44
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            select [date],[weekday], [PendingWO],[PendingWA],[ActiveWO],[ActiveWA],[CompletedWO],[CompletedWA],[CancelledWO],[CancelledWA],[ExpiredWO],[ExpiredWA]
+            from
+            (
+                select CONVERT(varchar, dateTimeofWork, 23) as [date], DATENAME(dw, dateTimeofWork) as [weekday], CONCAT([statusEN], 'WO') [status], count(*) as [count]
+                from dbo.workorders as wo
+                where DATEDIFF(dd, dateTimeofWork, CURRENT_TIMESTAMP) < 180
+                group by CONVERT(varchar, dateTimeofWork, 23),  DATENAME(dw, dateTimeofWork), CONCAT([statusEN], 'WO')
+                union
+                select CONVERT(varchar, dateTimeofWork, 23) as [date], DATENAME(dw, dateTimeofWork) as [weekday], CONCAT([statusEN], 'WA') status, count(*) as [count]
+                from dbo.workorders as wo
+                join dbo.WorkAssignments as wa on wo.id = wa.workOrderID
+                where DATEDIFF(dd, dateTimeofWork, CURRENT_TIMESTAMP) < 180
+                group by CONVERT(varchar, dateTimeofWork, 23),  DATENAME(dw, dateTimeofWork), CONCAT([statusEN], 'WA')
+            ) as source
+            PIVOT
+            (
+                sum([count])
+                for [status] in ([PendingWO],[PendingWA],[ActiveWO],[ActiveWA],[CompletedWO],[CompletedWA],[CancelledWO],[CancelledWA],[ExpiredWO],[ExpiredWA])
+            ) as WOWASummary
+          viewName: View_WOWASummary
+  - changeSet:
+      id: 1590217406948-45
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: workerSigninID
+          baseTableName: WorkAssignments
+          constraintName: WorkAssignment_workerSiginin
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: NO ACTION
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: WorkerSignins
+          validate: true
+  - changeSet:
+      id: 1590217406948-46
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: "SELECT COUNT(WorkAssignments.ID) AS WorkAssignmentCount, MONTH(WorkOrders.dateTimeofWork)\
+            \ AS MonthOfWork, YEAR(WorkOrders.dateTimeofWork) AS YearOfWork\nFROM WorkAssignments,\
+            \ WorkOrders \nWHERE WorkAssignments.workOrderID  = WorkOrders.ID\nGROUP\
+            \ BY YEAR(WorkOrders.dateTimeofWork), MONTH(WorkOrders.dateTimeofWork);"
+          viewName: WorkAssignmentCountByMonth
+  - changeSet:
+      id: 1590217406948-47
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: dateTimeofWork
+          indexName: dateTimeofWork
+          tableName: WorkOrders
+  - changeSet:
+      id: 1590217406948-48
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: EmployerID
+          indexName: nci_wi_WorkOrders_60EE0838F1E27A388627
+          tableName: WorkOrders
+  - changeSet:
+      id: 1590217406948-49
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: "SELECT COUNT(WorkOrders.ID) AS WorkOrderCount, MONTH(WorkOrders.dateTimeofWork)\
+            \ AS MonthOfWork, YEAR(WorkOrders.dateTimeofWork) AS YearOfWork\nFROM WorkOrders\
+            \ \nGROUP BY YEAR(WorkOrders.dateTimeofWork), MONTH(WorkOrders.dateTimeofWork);"
+          viewName: zz_WorkOrderCountByMonth
+  - changeSet:
+      id: 1590217406948-50
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              computed: true
+              name: ([NormalizedName] IS NOT NULL)
+          indexName: RoleNameIndex
+          tableName: AspNetRoles
+          unique: true
+  - changeSet:
+      id: 1590217406948-51
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: WorkOrder_ID
+          baseTableName: EmailWorkOrder
+          constraintName: FK_EmailWorkOrder_WorkOrders_WorkOrder_ID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: WorkOrders
+          validate: true
+  - changeSet:
+      id: 1590217406948-52
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: Email_ID
+          indexName: IX_Email_ID
+          tableName: EmailWorkOrder
+  - changeSet:
+      id: 1590217406948-53
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: WorkOrder_ID
+          indexName: IX_WorkOrder_ID
+          tableName: EmailWorkOrder
+  - changeSet:
+      id: 1590217406948-54
+      author: jcii (generated)
+      changes:
+      - addPrimaryKey:
+          columnNames: Email_ID, WorkOrder_ID
+          constraintName: PK_dbo.EmailWorkOrders
+          tableName: EmailWorkOrder
+  - changeSet:
+      id: 1590217406948-55
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: EventID
+          baseTableName: JoinEventImage
+          constraintName: FK_dbo.JoinEventImages_dbo.Events_EventID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Events
+          validate: true
+  - changeSet:
+      id: 1590217406948-56
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: EventID
+          indexName: IX_EventID
+          tableName: JoinEventImage
+  - changeSet:
+      id: 1590217406948-57
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: ImageID
+          indexName: IX_ImageID
+          tableName: JoinEventImage
+  - changeSet:
+      id: 1590217406948-58
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: NormalizedEmail
+          indexName: EmailIndex
+          tableName: AspNetUsers
+  - changeSet:
+      id: 1590217406948-59
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              computed: true
+              name: ([NormalizedUserName] IS NOT NULL)
+          indexName: UserNameIndex
+          tableName: AspNetUsers
+          unique: true
+  - changeSet:
+      id: 1590217406948-60
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT COUNT(Activities.ID) AS ActivityCount, MONTH(datestart) AS MonthOfActivity, YEAR(datestart) AS YearOfActivity
+            FROM Activities
+            GROUP BY YEAR(datestart), MONTH(datestart);
+          viewName: ActivityCountByMonth
+  - changeSet:
+      id: 1590217406948-61
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: UserId
+          baseTableName: AspNetUserLogins
+          constraintName: FK_AspNetUserLogins_AspNetUsers_UserId
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: Id
+          referencedTableName: AspNetUsers
+          validate: true
+  - changeSet:
+      id: 1590217406948-62
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: UserId
+          indexName: IX_AspNetUserLogins_UserId
+          tableName: AspNetUserLogins
+  - changeSet:
+      id: 1590217406948-63
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT COUNT(Employers.ID) AS EmployerCount, MONTH(datecreated) AS MonthOfStartEmployment, YEAR(datecreated) AS YearOfStartEmployment
+            FROM Employers
+            GROUP BY YEAR(datecreated), MONTH(datecreated);
+          viewName: EmployerCountByMonth
+  - changeSet:
+      id: 1590217406948-64
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: RoleId
+          baseTableName: AspNetRoleClaims
+          constraintName: FK_AspNetRoleClaims_AspNetRoles_RoleId
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: Id
+          referencedTableName: AspNetRoles
+          validate: true
+  - changeSet:
+      id: 1590217406948-65
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: RoleId
+          indexName: IX_AspNetRoleClaims_RoleId
+          tableName: AspNetRoleClaims
+  - changeSet:
+      id: 1590217406948-66
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: UserId
+          baseTableName: AspNetUserClaims
+          constraintName: FK_AspNetUserClaims_AspNetUsers_UserId
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: Id
+          referencedTableName: AspNetUsers
+          validate: true
+  - changeSet:
+      id: 1590217406948-67
+      author: jcii (generated)
+      changes:
+      - createIndex:
+          columns:
+          - column:
+              name: UserId
+          indexName: IX_AspNetUserClaims_UserId
+          tableName: AspNetUserClaims
+  - changeSet:
+      id: 1590217406948-68
+      author: jcii (generated)
+      changes:
+      - createView:
+          fullDefinition: false
+          selectQuery: |-
+            SELECT COUNT(Workers.ID) AS MembershipCount, MONTH(dateOfMembership) AS MonthOfMembership, YEAR(dateOfMembership) AS YearOfMembership
+            FROM Workers
+            GROUP BY YEAR(dateOfMembership), MONTH(dateOfMembership);
+          viewName: MembershipCountByMonth
+  - changeSet:
+      id: 1590217406948-69
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: ID
+          baseTableName: Workers
+          constraintName: Person_Worker
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Persons
+          validate: true
+  - changeSet:
+      id: 1590217406948-70
+      author: jcii (generated)
+      changes:
+      - addUniqueConstraint:
+          columnNames: workOrderId
+          constraintName: UniqueWoID
+          tableName: DrivingDistances
+  - changeSet:
+      id: 1590217406948-71
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: UserId
+          baseTableName: AspNetUserTokens
+          constraintName: FK_AspNetUserTokens_AspNetUsers_UserId
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: Id
+          referencedTableName: AspNetUsers
+          validate: true
+  - changeSet:
+      id: 1590217406948-72
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: transportProviderID
+          baseTableName: TransportProviderAvailabilities
+          constraintName: FK_dbo.TransportProviderAvailabilities_dbo.TransportProviders_transportProviderID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: TransportProviders
+          validate: true
+  - changeSet:
+      id: 1590217406948-73
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: ActivityID
+          baseTableName: ActivitySignins
+          constraintName: FK_ActivitySignins_Activities_activityID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Activities
+          validate: true
+  - changeSet:
+      id: 1590217406948-74
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: personID
+          baseTableName: ActivitySignins
+          constraintName: FK_ActivitySignins_Persons_personID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: NO ACTION
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Persons
+          validate: true
+  - changeSet:
+      id: 1590217406948-75
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: transportRuleID
+          baseTableName: TransportCostRules
+          constraintName: FK_dbo.TransportCostRules_dbo.TransportRules_transportRuleID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: TransportRules
+          validate: true
+  - changeSet:
+      id: 1590217406948-76
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: WorkerID
+          baseTableName: WorkerSignins
+          constraintName: Worker_workersignins
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: NO ACTION
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Workers
+          validate: true
+  - changeSet:
+      id: 1590217406948-77
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: WorkerID
+          baseTableName: WorkerRequests
+          constraintName: WorkerRequest_workerRequested
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Workers
+          validate: true
+  - changeSet:
+      id: 1590217406948-78
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: WorkOrderID
+          baseTableName: WorkerRequests
+          constraintName: WorkerRequest_workOrder
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: WorkOrders
+          validate: true
+  - changeSet:
+      id: 1590217406948-79
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: RoleId
+          baseTableName: AspNetUserRoles
+          constraintName: FK_AspNetUserRoles_AspNetRoles_RoleId
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: Id
+          referencedTableName: AspNetRoles
+          validate: true
+  - changeSet:
+      id: 1590217406948-80
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: UserId
+          baseTableName: AspNetUserRoles
+          constraintName: FK_AspNetUserRoles_AspNetUsers_UserId
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: Id
+          referencedTableName: AspNetUsers
+          validate: true
+  - changeSet:
+      id: 1590217406948-81
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: workerAssignedID
+          baseTableName: WorkAssignments
+          constraintName: Worker_workAssignments
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: NO ACTION
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Workers
+          validate: true
+  - changeSet:
+      id: 1590217406948-82
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: workOrderID
+          baseTableName: WorkAssignments
+          constraintName: WorkOrder_workAssignments
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: WorkOrders
+          validate: true
+  - changeSet:
+      id: 1590217406948-83
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: EmployerID
+          baseTableName: WorkOrders
+          constraintName: Employer_WorkOrders
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Employers
+          validate: true
+  - changeSet:
+      id: 1590217406948-84
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: Email_ID
+          baseTableName: EmailWorkOrder
+          constraintName: FK_dbo.EmailWorkOrders_dbo.Emails_Email_ID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Emails
+          validate: true
+  - changeSet:
+      id: 1590217406948-85
+      author: jcii (generated)
+      changes:
+      - addForeignKeyConstraint:
+          baseColumnNames: ImageID
+          baseTableName: JoinEventImage
+          constraintName: FK_dbo.JoinEventImages_dbo.Images_ImageID
+          deferrable: false
+          initiallyDeferred: false
+          onDelete: CASCADE
+          onUpdate: NO ACTION
+          referencedColumnNames: ID
+          referencedTableName: Images
+          validate: true
+  
+  

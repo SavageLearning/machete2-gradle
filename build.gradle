@@ -20,6 +20,9 @@ repositories {
     jcenter()
     mavenCentral()
 }
+ext {
+    dropwizardVersion = "2.0.9"
+}
 
 dependencies {
     // This dependency is used by the application.
@@ -27,7 +30,9 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-    implementation 'io.dropwizard:dropwizard-core:2.0.9'
+    implementation "io.dropwizard:dropwizard-core:${dropwizardVersion}"
+    implementation "io.dropwizard:dropwizard-migrations:${dropwizardVersion}"
+    implementation "io.dropwizard:dropwizard-jdbi3:${dropwizardVersion}"
 }
 
 application {
@@ -46,4 +51,16 @@ task customFatJar(type: Jar) {
     baseName = 'all-in-one-jar'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
+}
+
+task migratePostgres(type: JavaExec) {
+    group = "database"
+	description = "Runs the database migration (Liquibase) command."
+	classpath = sourceSets.main.runtimeClasspath
+	environment(run.environment)
+	main = mainClassName
+	args = ["db", "migrate", "--migrations", "migrate src/main/resources/migrations.yaml"]
+	// if (project.hasProperty("dry-run")) {
+	// 	args += "--dry-run"
+	// }
 }
